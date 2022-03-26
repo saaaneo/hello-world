@@ -4,7 +4,7 @@ pipeline {
 	skipDefaultCheckout(true)
     }
     stages {
-        stage('checkout SCM') {
+        stage('Checkout SCM') {
             steps {
                 git branch: 'pipeline', url: 'https://github.com/saaaneo/hello-world.git'
             }
