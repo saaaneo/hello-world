@@ -1,8 +1,10 @@
 pipeline {
     agent any
-
+    options {
+	skipDefaultCheckout(true)
+    }
     stages {
-        stage('Preparation') {
+        stage('checkout SCM') {
             steps {
                 git branch: 'pipeline', url: 'https://github.com/saaaneo/hello-world.git'
             }
